@@ -1,0 +1,47 @@
+PODS:
+  - Alamofire (5.6.1)
+  - CryptoSwift (1.5.1)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - SwiftFormat/CLI (0.49.10)
+  - SwiftKeychainWrapper (4.0.1)
+  - SwiftLint (0.47.1)
+  - T1PSDK (1.2.7):
+    - T1PSDK/Core (= 1.2.7)
+  - T1PSDK/Core (1.2.7):
+    - CryptoSwift
+    - Moya
+    - SwiftFormat/CLI
+    - SwiftKeychainWrapper
+    - SwiftLint
+
+DEPENDENCIES:
+  - T1PSDK (from `https://the1-t1p-sdk.s3.amazonaws.com/files/T1PSDK_1.2.7.podspec`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CryptoSwift
+    - Moya
+    - SwiftFormat
+    - SwiftKeychainWrapper
+    - SwiftLint
+
+EXTERNAL SOURCES:
+  T1PSDK:
+    :podspec: https://the1-t1p-sdk.s3.amazonaws.com/files/T1PSDK_1.2.7.podspec
+
+SPEC CHECKSUMS:
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  CryptoSwift: c4f2debceb38bf44c80659afe009f71e23e4a082
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  SwiftFormat: 7e7b810d61b0518ea30d3753051ebde546ae4c0b
+  SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
+  SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
+  T1PSDK: ad987027f1162c865f7db5a5a5e0733607865b2e
+
+PODFILE CHECKSUM: df7b9d2370ea4799049d703ca6c7955232f79110
+
+COCOAPODS: 1.11.3
