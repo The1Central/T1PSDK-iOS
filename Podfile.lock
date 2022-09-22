@@ -1,13 +1,13 @@
 PODS:
-  - Alamofire (5.6.1)
+  - Alamofire (5.6.2)
   - CryptoSwift (1.5.1)
   - Moya (15.0.0):
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
-  - SwiftFormat/CLI (0.49.10)
+  - SwiftFormat/CLI (0.49.18)
   - SwiftKeychainWrapper (4.0.1)
-  - SwiftLint (0.47.1)
+  - SwiftLint (0.49.1)
   - T1PSDK (1.2.7):
     - T1PSDK/Core (= 1.2.7)
   - T1PSDK/Core (1.2.7):
@@ -18,7 +18,7 @@ PODS:
     - SwiftLint
 
 DEPENDENCIES:
-  - T1PSDK (from `https://the1-t1p-sdk.s3.amazonaws.com/files/T1PSDK_1.2.7.podspec`)
+  - T1PSDK (from `https://github.com/The1Central/T1PSDK-iOS/releases/download/1.2.7/T1PSDK.podspec`)
 
 SPEC REPOS:
   trunk:
@@ -31,17 +31,17 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   T1PSDK:
-    :podspec: https://the1-t1p-sdk.s3.amazonaws.com/files/T1PSDK_1.2.7.podspec
+    :podspec: https://github.com/The1Central/T1PSDK-iOS/releases/download/1.2.7/T1PSDK.podspec
 
 SPEC CHECKSUMS:
-  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   CryptoSwift: c4f2debceb38bf44c80659afe009f71e23e4a082
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
-  SwiftFormat: 7e7b810d61b0518ea30d3753051ebde546ae4c0b
+  SwiftFormat: 2402d29b26746f169cce5454d5af88314cbb2e35
   SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
-  SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
+  SwiftLint: 32ee33ded0636d0905ef6911b2b67bbaeeedafa5
   T1PSDK: ad987027f1162c865f7db5a5a5e0733607865b2e
 
-PODFILE CHECKSUM: df7b9d2370ea4799049d703ca6c7955232f79110
+PODFILE CHECKSUM: 3bde39ea6810edaa363f903fd8e9b62dc46ef091
 
 COCOAPODS: 1.11.3
