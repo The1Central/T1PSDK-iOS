@@ -1,0 +1,11 @@
+framework module T1PSDK {
+  umbrella header "T1PSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module T1PSDK.Swift {
+    header "T1PSDK-Swift.h"
+    requires objc
+}

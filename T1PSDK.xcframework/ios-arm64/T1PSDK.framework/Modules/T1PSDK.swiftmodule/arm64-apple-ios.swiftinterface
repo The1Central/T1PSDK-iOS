@@ -1,0 +1,134 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name T1PSDK
+import CoreText
+import Swift
+@_exported import T1PSDK
+import UIKit
+import WebKit
+import _Concurrency
+extension WebKit.WKWebView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var safeAreaInsets: UIKit.UIEdgeInsets {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+}
+public enum T1PEnvironment {
+  case sit
+  case uat
+  case pvt
+  case production
+  public static func == (a: T1PSDK.T1PEnvironment, b: T1PSDK.T1PEnvironment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum SDKLanguage : Swift.String {
+  case thai
+  case english
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public typealias SuccessBlock = (Swift.String) -> Swift.Void
+public typealias FailureBlock = (Swift.String) -> Swift.Void
+public struct AlertViewModel {
+}
+@objc public protocol AlertViewControllerProtocol {
+  @objc optional func didTappedCancel()
+  @objc func didTappedAccept()
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class T1AlertViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?, alertViewModel: T1PSDK.AlertViewModel)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @objc deinit
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public func showLoadingViewDemo()
+}
+public struct AuthToken : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case accessToken
+    case expireIn
+    case idToken
+    case refreshToken
+    case scope
+    case tokenType
+    case error
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum The1FontStyle : Swift.Int {
+  case bold
+  case light
+  case regular
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIFont {
+  convenience public init?(the1FontStyle: T1PSDK.The1FontStyle, size: CoreGraphics.CGFloat)
+}
+@propertyWrapper public struct UserDefault<T> {
+  public let key: Swift.String
+  public let defaultValue: T
+  public var wrappedValue: T {
+    get
+    set
+  }
+  public init(_ key: Swift.String, defaultValue: T)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class T1PLoadingViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol T1PProtocol {
+  func initialT1P(environment: T1PSDK.T1PEnvironment, redirectUrl: Swift.String, clientId: Swift.String, language: T1PSDK.SDKLanguage?)
+  func signIn() -> UIKit.UIViewController
+  func signUp() -> UIKit.UIViewController
+  func accountRecovery() -> UIKit.UIViewController
+  func signOut(onSuccess: @escaping T1PSDK.SuccessBlock, onFailure: @escaping T1PSDK.FailureBlock)
+  func getAccessToken(onSuccess: @escaping T1PSDK.SuccessBlock, onFailure: @escaping T1PSDK.FailureBlock)
+  func getLanguage() -> T1PSDK.SDKLanguage
+}
+public protocol T1PDelegate : AnyObject {
+  func getTokenSuccess(response: T1PSDK.AuthToken)
+  func getTokenFail()
+}
+public class T1P {
+  public var shared: T1PSDK.T1PProtocol
+  public var delegate: T1PSDK.T1PDelegate?
+  public init()
+  @objc deinit
+}
+extension T1PSDK.T1PEnvironment : Swift.Equatable {}
+extension T1PSDK.T1PEnvironment : Swift.Hashable {}
+extension T1PSDK.SDKLanguage : Swift.Equatable {}
+extension T1PSDK.SDKLanguage : Swift.Hashable {}
+extension T1PSDK.SDKLanguage : Swift.RawRepresentable {}
+extension T1PSDK.AuthToken.CodingKeys : Swift.Equatable {}
+extension T1PSDK.AuthToken.CodingKeys : Swift.Hashable {}
+extension T1PSDK.AuthToken.CodingKeys : Swift.RawRepresentable {}
+extension T1PSDK.The1FontStyle : Swift.Equatable {}
+extension T1PSDK.The1FontStyle : Swift.Hashable {}
+extension T1PSDK.The1FontStyle : Swift.RawRepresentable {}
