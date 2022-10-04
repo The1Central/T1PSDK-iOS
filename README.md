@@ -9,7 +9,7 @@ T1PSDK-iOS for our partners
   platform :ios, '11.0'
   target 'T1PSDK-Demo'  do
      use_frameworks!
-     pod 'T1PSDK', :git => 'https://github.com/The1Central/T1PSDK-iOS.git', :tag => '1.2.7'
+     pod 'T1PSDK', :git => 'https://github.com/The1Central/T1PSDK-iOS.git'
   end
   ```
 
